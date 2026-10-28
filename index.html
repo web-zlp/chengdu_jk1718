@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="蜀韵·成都 —— 成都文化旅游宣传网站，带你领略天府之国、美食之都的千年风情。">
+    <title>蜀韵·成都 - 成都文化旅游宣传网</title>
+    <!-- 结构与样式分离：所有样式统一由外部样式表 css/style.css 控制 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============ 页头：左侧 Logo+标题，右侧导航栏 ============ -->
+    <header class="header">
+        <div class="container header-inner">
+            <!-- 左侧品牌区：金色圆形 Logo + 站点标题 -->
+            <a href="#" class="brand" aria-label="蜀韵成都网站首页">
+                <span class="brand-logo" aria-hidden="true">蜀</span>
+                <span class="brand-name">蜀韵<span class="brand-dot">·</span>成都</span>
+            </a>
+
+            <!-- 右侧导航栏：首页为当前页(高亮)，其余栏目暂为占位链接，后续可指向美食/景点/文化/攻略子页面 -->
+            <nav class="nav" aria-label="网站主导航">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active" aria-current="page">首页</a></li>
+                    <li><a href="#" class="nav-link">美食</a></li>
+                    <li><a href="#" class="nav-link">景点</a></li>
+                    <li><a href="#" class="nav-link">文化</a></li>
+                    <li><a href="#" class="nav-link">攻略</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ 全屏 Banner 轮播区（共 3 张轮播图） ============ -->
+        <section class="banner" id="banner" aria-label="成都城市风采轮播展示">
+            <div class="banner-slider" id="bannerSlider">
+
+                <!-- 轮播图 1：城市风貌
+                     说明：默认可直连的占位图；如需本地图片，可将 src 替换为 img/banner-1.jpg -->
+                <div class="banner-slide is-active">
+                    <img class="banner-img" src="https://picsum.photos/seed/chengdu-1/1920/1080" alt="成都城市风貌">
+                    <div class="banner-overlay"></div>
+                    <div class="banner-caption">
+                        <p class="banner-sub">天府之国 · 锦绣蓉城</p>
+                        <h2 class="banner-title">蜀韵成都</h2>
+                        <p class="banner-desc">一座来了就不想走的城市</p>
+                    </div>
+                </div>
+
+                <!-- 轮播图 2：熊猫故乡 -->
+                <div class="banner-slide">
+                    <img class="banner-img" src="https://picsum.photos/seed/chengdu-2/1920/1080" alt="成都大熊猫繁育研究基地">
+                    <div class="banner-overlay"></div>
+                    <div class="banner-caption">
+                        <p class="banner-sub">国宝之乡 · 生态乐园</p>
+                        <h2 class="banner-title">熊猫家园</h2>
+                        <p class="banner-desc">与国宝大熊猫来一场萌趣约会</p>
+                    </div>
+                </div>
+
+                <!-- 轮播图 3：市井烟火 -->
+                <div class="banner-slide">
+                    <img class="banner-img" src="https://picsum.photos/seed/chengdu-3/1920/1080" alt="成都宽窄巷子">
+                    <div class="banner-overlay"></div>
+                    <div class="banner-caption">
+                        <p class="banner-sub">千年古街 · 市井烟火</p>
+                        <h2 class="banner-title">宽窄之间</h2>
+                        <p class="banner-desc">品一盏盖碗茶，摆一桌龙门阵</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 左右切换按钮 -->
+            <button class="banner-btn banner-prev" type="button" aria-label="上一张">&lsaquo;</button>
+            <button class="banner-btn banner-next" type="button" aria-label="下一张">&rsaquo;</button>
+
+            <!-- 轮播指示圆点 -->
+            <div class="banner-dots" id="bannerDots">
+                <button class="banner-dot is-active" type="button" data-index="0" aria-label="第1张"></button>
+                <button class="banner-dot" type="button" data-index="1" aria-label="第2张"></button>
+                <button class="banner-dot" type="button" data-index="2" aria-label="第3张"></button>
+            </div>
+        </section>
+
+        <!-- ============ 成都宣传视频区 ============ -->
+        <section class="section video-section" id="video">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-tag">VIDEO</p>
+                    <h2 class="section-title">遇见成都</h2>
+                </div>
+                <!-- 视频播放器：
+                     1. 首选本地宣传片 video/chengdu.mp4，将成都宣传视频放入 video 目录即可替换；
+                     2. 本地视频缺失时，浏览器自动按顺序加载在线备用视频，保证播放器可用 -->
+                <div class="video-wrap">
+                    <video controls preload="metadata" poster="https://picsum.photos/seed/chengdu-video/1280/720">
+                        <source src="video/chengdu.mp4" type="video/mp4">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        抱歉，您的浏览器不支持 HTML5 视频播放。
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 成都介绍文字区（约 300 字） ============ -->
+        <section class="section intro-section" id="intro">
+            <div class="container intro-container">
+                <div class="section-head">
+                    <p class="section-tag">ABOUT</p>
+                    <h2 class="section-title">锦绣天府 · 千年蓉城</h2>
+                </div>
+                <p class="intro-text">
+                    成都，古称“蓉城”“锦官城”，坐落于天府之国四川盆地的西部，是一座拥有三千多年建城史的国家历史文化名城。
+                    这里既有杜甫笔下“窗含西岭千秋雪”的诗情画意，也有武侯祠、金沙遗址、都江堰等世界级文化遗产的厚重底蕴。
+                    漫步宽窄巷子与锦里古街，青砖黛瓦间流淌着老成都的市井烟火；流连春熙路与太古里，现代光影中跃动着新成都的时尚脉搏。
+                    一盏盖碗茶，一桌龙门阵，一顿热辣滚烫的火锅，成都人把平凡的日子过成了艺术，处处透着“巴适”的生活哲学。
+                    这里是国宝大熊猫的故乡，是联合国教科文组织授予的“美食之都”，更是无数旅人心中“来了就不想走的城市”。
+                    蜀韵成都，正以包容开放的姿态，邀你共赴一场跨越千年的文化之约。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ 页尾 ============ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-brand">蜀韵<span class="footer-dot">·</span>成都</p>
+            <ul class="footer-nav">
+                <li><a href="#" class="footer-link">首页</a></li>
+                <li><a href="#" class="footer-link">美食</a></li>
+                <li><a href="#" class="footer-link">景点</a></li>
+                <li><a href="#" class="footer-link">文化</a></li>
+                <li><a href="#" class="footer-link">攻略</a></li>
+            </ul>
+            <p class="footer-copy">© 2026 蜀韵·成都 成都文化旅游宣传网 &nbsp;|&nbsp; 蜀ICP备00000000号</p>
+        </div>
+    </footer>
+
+    <!-- 交互逻辑独立于结构：轮播效果由外部脚本 js/main.js 实现 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
